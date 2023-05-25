@@ -1,0 +1,46 @@
+<div id="main">
+    
+        <!-- mainVisual -->
+        <div id="mainVisual">
+            <div class="pc"><%= image_tag 'logo.png' %></div>
+            <div class="sp"><%= image_tag 'logo.png' %></div>
+        </div>
+        
+        <!-- sevice -->
+        <section id="sevice" class="cf">
+            <h2 class="ttl">about</h2>
+            いい感じの自己紹介
+            横っちょに画像、セリフ的な感じなのがいいな
+        </section>
+
+        <!-- works -->
+        <section id="works" class="cf">
+            <h2 class="ttl">Works</h2>
+            <ul class="worksList">
+                <li>
+                    漫画
+                </li>
+            </ul>
+        </section>
+        
+        <!-- blog -->
+        <section id="blog" class="cf">
+            <h2 class="ttl">Blog</h2>
+            <ul class="blogList">
+                <% @blogs.each do |blog| %>
+                    <li>
+                        <p class="photo">
+                            <%= link_to image_tag('logo.png'), blog_path(blog) %>
+                        </p>
+                        <p class="cont"><%= blog.title %></p>
+                        <p class="cont"><td><%= blog.text %></p>
+                        <p><%= link_to 'more', blog_path(blog) %></p>
+                    </li>
+                <% end %>
+            </ul>
+        </section>
+        
+        <!-- toTop -->
+        <p class="toTop"><a href="#top"><img src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="" width="22" height="14"></a></p>
+        
+    </div>

@@ -1,0 +1,264 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@charset "utf-8";
+
+/* top ----------------------------------------- */
+#mainVisual {
+  margin-bottom: 30px;
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+  }
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+
+/* sevice */
+#sevice {
+  margin-bottom: 60px;
+  padding: 0 30px;
+  section {
+    margin-bottom: 40px;
+    &.last {
+      margin-bottom: 0;
+    }
+    .icon {
+      margin-bottom: 20px;
+      text-align: center;
+      img {
+        width: 49px;
+        height: 51px;
+      }
+    }
+  }
+}
+
+/* works */
+#works {
+  margin-bottom: 70px;
+  padding: 0 20px;
+  li {
+    margin-bottom: 40px;
+    text-align: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      width: 280px;
+      height: 260px;
+    }
+  }
+}
+
+/* blog */
+#blog {
+  margin-bottom: 30px;
+  padding: 0 30px;
+  li {
+    margin-bottom: 40px;
+    text-align: right;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .photo {
+      margin-bottom: 30px;
+      text-align: center;
+      img {
+        width: 280px;
+        height: 260px;
+      }
+    }
+    .cont {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .detail {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      padding: 8px 12px;
+      background-color: #eee;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+/* タブレット向け：760px～960px */
+@media only screen and (min-width: 760px) {
+  /* mainVisual */
+  #mainVisual {
+    margin-bottom: 80px;
+    background-color: #ecebeb;
+    text-align: center;
+    img {
+      max-width: 960px;
+      height: auto;
+    }
+    .pc {
+      display: block;
+    }
+    .sp {
+      display: none;
+    }
+  }
+
+  /* sevice */
+  #sevice {
+    max-width: 920px;
+    margin: 0 5% 130px 5%;
+    padding: 0;
+    section {
+      float: left;
+      width: 30%;
+      height: auto;
+      margin-right: 5%;
+      &.last {
+        margin-right: 0;
+      }
+      .icon {
+        margin-bottom: 40px;
+        text-align: center;
+        img {
+          width: 98px;
+          height: 102px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  #main {
+    h2.ttl {
+    }
+    h3.ttl {
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    p.ttl {
+      margin-bottom: 45px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  /* works */
+  #works {
+    max-width: 920px;
+    margin: 0 5% 150px 3%;
+    padding: 0;
+    li {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 30%;
+      margin-right: 5%;
+      margin-bottom: 60px;
+      border: 1px solid #e0e0e0;
+      vertical-align: top;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  /* blog */
+  #blog {
+    max-width: 920px;
+    margin: 0 5% 50px 5%;
+    padding: 0;
+    li {
+      display: inline-block;
+      width: 30%;
+      margin-right: 5%;
+      margin-bottom: 60px;
+      vertical-align: top;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      .photo {
+      }
+      .photo img {
+        width: 100%;
+        height: auto;
+      }
+      .cont {
+        margin-bottom: 20px;
+      }
+      .detail {
+        padding: 8px 12px;
+        background-color: #eee;
+      }
+    }
+  }
+  .toTop {
+    a {
+      display: block;
+      width: 24px;
+      margin: 0 auto 20px auto;
+      padding: 8px 20px;
+    }
+  }
+} /* タブレット向け */
+
+/* PC向けレイアウトの指定：961px～ */
+@media only screen and (min-width: 961px) {
+  /* sevice */
+  #sevice {
+    width: 920px;
+    margin: 0 auto 130px auto;
+    padding: 0;
+    section {
+      float: left;
+      width: 280px;
+      height: auto;
+      margin-right: 40px;
+    }
+    #main {
+      h2.ttl {
+        margin-bottom: 65px;
+        font-size: 50px;
+      }
+      h3.ttl {
+        font-size: 25px;
+      }
+      p.ttl {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* works */
+  #works {
+    width: 920px;
+    margin: 0 auto 150px auto;
+    padding: 0;
+    li {
+      width: 280px;
+      margin-right: 40px;
+    }
+  }
+
+  /* blog */
+  #blog {
+    width: 920px;
+    margin: 0 auto 50px auto;
+    padding: 0;
+    li {
+      width: 280px;
+      margin-right: 40px;
+    }
+  }
+} /* PC向け */

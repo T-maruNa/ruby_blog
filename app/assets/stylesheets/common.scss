@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+ 全デバイス共通のスタイルとスマートフォン向けレイアウトの指定
+/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_*/
+
+/* common.scss
+----------------------------------------- */
+body {
+	font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+	font-size: 14px;
+	color: #333;
+	line-height:1.9;
+	text-align: left;
+	-webkit-text-size-adjust: 100%;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	&:hover {
+		color:#333;
+		text-decoration: none;
+	}
+}
+.sp {
+	display: block;
+}
+.pc {
+	display: none;
+}
+
+/* header
+----------------------------------------- */
+header {
+	margin-bottom: 25px;
+	#inner {
+		margin-bottom: 30px;
+	}
+	h1 {
+		margin: 21px 0 25px 0;
+		padding-left: 30px;
+		text-align: left;
+		img {
+			width: 196px;
+			height: 25px;
+		}
+	}
+	.contact-sp-header {
+		position: absolute;
+		top: 25px;
+		right: 20px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		letter-spacing: 0.1em;
+		text-decoration: underline;
+	}
+	nav {
+		margin-bottom: 20px;
+		border-top: 1px solid #d9d9d9;
+		li {
+			float: left;
+			width: 50%;
+			border-bottom: 1px solid #d9d9d9;
+			text-align: center;
+			&.contact {
+				display: inline;
+			}
+		}
+		#about & li.about a,
+		#works & li.works a,
+		#blog & li.blog a,
+		#contact & li.contact a {
+			opacity: 0.3;
+		}
+		ul li:nth-child(odd) {
+			background: url(../common/line_nav.gif) repeat-y right top;
+			background-size:  1px 10px;
+		}
+		ul li a {
+			display: block;
+			width: 100%;
+			padding: 12px 0;
+			font-family: 'Lato', sans-serif;
+			font-weight: 400;
+			font-size: 13px;
+			letter-spacing: 0.1em;
+		}
+	}
+	.socialBtn {
+		text-align: center;
+		margin: 0 auto;
+		li {
+			display: inline;
+			margin-right: 12px;
+			&.last {
+				margin-right: 0;
+			}
+			img {
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+}
+
+/* contents
+----------------------------------------- */
+#main {
+	h2.ttl {
+		margin-bottom: 40px;
+		text-align: center;
+		line-height: 1.0;
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		font-size: 40px;
+		letter-spacing: 0.05em;
+	}
+	.inner {
+		h2.ttl {
+			margin-bottom: 25px;
+		}
+		h3.ttl {
+			margin-bottom: 12px;
+			text-align: center;
+			line-height: 1.0;
+			font-size: 22px;
+			color: #505050;
+		}
+		p.ttl {
+			margin-bottom: 20px;
+			text-align: center;
+			line-height: 1.0;
+			font-family: 'Lato', sans-serif;
+			font-weight: 400;
+			font-size: 13px;
+			letter-spacing: 0.1em;
+			color: #a5a5a5;
+		}
+	}
+	.contBox {
+		margin: 0 20px;
+	}
+	.toTop {
+		text-align: center;
+		a {
+			display: block;
+			margin-bottom: 40px;
+			padding: 8px 20px;
+			img {
+				width: 22px;
+				height: 14px;
+			}
+		}
+	}
+	.pageNation {
+		position: relative;
+		margin-bottom: 30px;
+		.pageLeft {
+			position: absolute;
+			left: 20px;
+			top: 0;
+		}
+		.pageRight {
+			position: absolute;
+			right: 20px;
+			top: 0;
+		}
+	}
+}
+
+/* wp-pagenavi
+----------------------------------------- */
+div.pagenavi {
+}
+.wp-pagenavi {
+	clear: both;
+	text-align: center;
+	a, span {
+		text-decoration: none;
+		padding: 3px 5px;
+		margin: 2px;
+		&:hover, &.current {
+			&:hover {
+				text-decoration: underline;
+			}
+			font-weight: bold;
+			text-decoration: underline;
+		}
+	}
+	span.current {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}
+
+/* footer
+----------------------------------------- */
+nav.footer {
+	margin-bottom: 20px;
+}
+#copyright {
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+
+/* タブレット向け：760px～960px */
+@media only screen and (min-width: 760px) {
+	.sp {
+		display: none;
+	}
+	.pc {
+		display: block;
+	}
+
+	/* header
+	----------------------------------------- */
+	header {
+		position: relative;
+		max-width: 960px;
+		height: 270px;
+		margin: 0 auto;
+		#inner {
+			margin-bottom: 30px;
+		}
+		h1 {
+			position: absolute;
+			top: 107px;
+			left: 50px;
+			margin: 0;
+			padding-left: 0;
+			text-align: center;
+			img {
+				width: 275px;
+				height: 35px;
+			}
+		}
+		nav {
+			position: absolute;
+			bottom: 30px;
+			right: 30px;
+			margin-bottom: 0;
+			border-top: none;
+			li {
+				margin-left: 50px;
+				display: inline;
+				float: none;
+				border-bottom: none;
+				text-align: right;
+			}
+			ul li:nth-child(odd) {
+				background: none;
+			}
+			ul li a {
+				display: inline;
+				font-size: 14px;
+				font-weight: 400;
+				letter-spacing: 0.1em;
+			}
+		}
+		.socialBtn {
+			position: absolute;
+			top: 112px;
+			right: 30px;
+			li {
+				display: inline;
+				margin-right: 14px;
+			}
+			li.last {
+				margin-right: 0;
+			}
+			img {
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
+
+	/* contents
+	----------------------------------------- */
+	#main.inner {
+		max-width: 960px;
+		padding: 0;
+		margin: 0 auto;
+	}
+	h2.ttl.large {
+		margin: 0 0 70px 0;
+		font-size: 46px;
+		text-align: left;
+	}
+	.contBox {
+		margin: 0 40px;
+	}
+	.pageNation .pageLeft {
+		position: absolute;
+		left: 40px;
+		top: 0;
+	}
+	.pageNation .pageRight {
+		position: absolute;
+		right: 40px;
+		top: 0;
+	}
+
+	/* wp-pagenavi
+	----------------------------------------- */
+	.wp-pagenavi {
+		clear: both;
+		text-align: left;
+	}
+
+	/* footer
+	----------------------------------------- */
+	footer {
+		max-width: 960px;
+		margin: 0 5%;
+		padding-bottom: 20px;
+	}
+	nav.footer {
+		position: relative;
+		float: left;
+		width: 60%;
+		margin: 60px 0 0 30px;
+	}
+	nav.footer a {
+		font-size: 14px;
+		font-weight: 400;
+	}
+	nav.footer li {
+		margin: 0 40px 0 0;
+	}
+	#copyright {
+		float: right;
+		width: 40%;
+		margin-top: 32px;
+		margin-bottom: 0;
+		text-align: right;
+	}
+
+} /* タブレット向け */
+
+/* PC向けレイアウトの指定：961px～ */
+@media only screen and (min-width: 961px) {
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	/* header
+	----------------------------------------- */
+	header h1 {
+		position: absolute;
+		top: 105px;
+		left: 0;
+	}
+	nav {
+		position: absolute;
+		bottom: 30px;
+		right: 0;
+	}
+	.socialBtn {
+		position: absolute;
+		top: 112px;
+		right: 10px;
+	}
+
+	/* contents
+	----------------------------------------- */
+	#main.inner {
+		max-width: 960px;
+		padding: 0;
+		margin: 0 auto;
+	}
+	.contBox {
+		margin: 0;
+	}
+	.pageNation .pageLeft {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.pageNation .pageRight {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	/* footer
+	----------------------------------------- */
+	footer {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	nav.footer {
+		margin-left: 0;
+	}
+
+} /* PC向け */
